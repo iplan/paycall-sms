@@ -38,8 +38,8 @@ describe PayCallSms::DeliveryNotificationParser do
       notification.reason_not_delivered.should be_blank
     end
 
-    it 'should normalize http params when status is koshe' do
-      http_params.update('Status' => 'koshe')
+    it 'should normalize http params when status is kosher' do
+      http_params.update('Status' => 'kosher')
       notification.delivery_status.should == :failed
       notification.gateway_status.should == 'kosher'
       notification.occurred_at.should be_present
